@@ -12,20 +12,22 @@
       <title>Home</title>
   </head>
   <body>
-  <ul class="nav nav-pills nav-justified" style="position: sticky">
-      <li class="nav-item">
-          <a class="nav-link active" href="jambHtmlActions/register.jsp">Register Candidate</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link " href="jambHtmlActions/listAllCandidate.jsp">View All candidate</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link " href="jambHtmlActions/Update.jsp">Update Candidate</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
-  </ul>
+  <div style = "padding:3px ;padding-top:unset;font-size: 2vh" >
+      <ul class="nav nav-pills nav-justified btn-success" style="position: sticky; margin-bottom: 50px">
+          <li class="nav-item" style = "color: white">
+              <a class="nav-link btn-success " href="jambHtmlActions/register.jsp">Register Candidate</a>
+          </li>
+          <li class="nav-item" style = "color: white">
+              <a class="nav-link" style = "color: white" href="jambHtmlActions/listAllCandidate.jsp">View All candidate</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link " href="" style = "color: white">AboutUs</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link " href="#" tabindex="-1" aria-disabled="true" style = "color: white">Our Management</a>
+          </li>
+      </ul>
+  </div>
   <header class="header">
       <div class="header__logo-box">
 

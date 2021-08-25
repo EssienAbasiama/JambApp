@@ -18,6 +18,20 @@
         <title>GetAspirantByRegistrationNumber</title>
     </head>
     <body>
+    <div style="padding: 3px">
+        <ul class = "nav nav-pills nav-justified" style="position: fixed">
+            <li class="nav-item" style = "color: Green;">
+                <a class="nav-link btn-success" href="../Home.jsp" style="color: white"><strong>JAMBAPP</strong></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link " href="listAllCandidate.jsp" style="color: white">View All candidate</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" tabindex="-1" aria-disabled="true" style="color: white">Logout</a>
+            </li>
+        </ul>
+    </div>
         <p>Get Aspirants By Registration Number</p>
 
         <form action="" method="post">

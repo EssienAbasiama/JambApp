@@ -20,55 +20,79 @@
     <title>JambForm Registration</title>
 </head>
 <body>
+    <div style="padding:2%">
+        <ul class="nav nav-pills nav-justified btn-success">
+            <li class="nav-item" style = "color: white ;font-size: 3vh">
+                <a class="nav-link"style = "color: white" href="../Home.jsp"><strong>JAMBAPP</strong></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="listAllCandidate.jsp" style = "color: white">View All candidate</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" tabindex="-1" aria-disabled="true" style = "color: white">Logout</a>
+            </li>
+        </ul>
+    </div>
+<div class ="register-class"style="margin: 3% 28%;border: 5px solid white;padding:2%; border-radius: 10% ">
     <form method="post">
-        <div class = form-group>
-            <label for="firstName">FirstName</label>
-            <input type="text" id="firstName" name="firstName">
-        </div>
+        <div style="display: flex">
+            <div class = form-group>
+                <label style="display: block;color: white" for="firstName">FirstName</label>
+                <input type="text" id="firstName" name="firstName">
+            </div>
             <div class = "form-group">
-                <label for="lastName">lastName</label>
+                <label style="display: block;color: white"for="lastName">lastName</label>
                 <input type="text" id="lastName" name="lastName">
             </div>
+
             <div class = "form-group">
-                <label for="middleName">Middle Name</label>
+                <label style="display: block;color: white"for="middleName">Middle Name</label>
                 <input type="text" id="middleName" name="middleName">
             </div>
+        </div>
+        <div style="display: flex">
             <div class = "form-group">
-                <label for="dateOfBirth">Date Of Birth</label>
+                <label style="display: block;color: white"for="dateOfBirth">Date Of Birth</label>
                 <input type="Date" id="dateOfBirth" name="dateOfBirth">
             </div>
             <div class = "form-group">
-                <label for="address">Address</label>
+                <label style="display: block;color: white" for="address">Address</label>
                 <input type="text" id="address" name="address">
             </div>
             <div class="form-group">
-                <label for="email">Email</label>
+                <label style="display: block;color: white" for="email">Email</label>
                 <input type="email" id="email" name="email">
             </div>
+        </div>
+        <div style="display: flex">
             <div class="form-group">
-                <label for="nIN">NIN</label>
+                <label style="display: block;color: white" for="nIN">NIN</label>
                 <input type="text" id="nIN" name="nIN">
             </div>
             <div class="form-group">
-                <label for="state">State</label>
+                <label style="display: block;color: white" for="state">State</label>
                 <input type="text" id="state" name="state">
             </div>
             <div class="form-group">
-                <label for="gender">Gender</label>
+                <label for="gender" style="display: block;color: white">Gender</label>
                 <input type="text" id="gender" name="gender">
             </div>
+        </div>
+        <div style="display: flex">
             <div class = "form-group">
-                <label for="institution">Institution</label>
+                <label for="institution" style="display: block;color: white">Institution</label>
                 <input type="text" id="institution" name="institution">
             </div>
             <div class="form-group">
-                <label for="course">Course</label>
+                <label for="course" style="display: block;color: white">Course</label>
                 <input type="text" id="course" name="course">
             </div>
+        </div>
             <div>
                 <button type="submit" class="btn btn-primary">submit</button>
             </div>
     </form>
+</div>
 <%
     if (request.getMethod().equalsIgnoreCase("POST")) {
     String firstName = request.getParameter("firstName");
@@ -88,7 +112,7 @@
     String gender = request.getParameter("gender");
     String institution = request.getParameter("institution");
     String course = request.getParameter("course");
-
+    try{
     AspirantRepository aspirantRepository = new AspirantRepository();
      boolean success = aspirantRepository.registerAspirants(firstName, lastName, middleName,
             dateOfbirth, address, email, nIN, gender, state,
@@ -103,6 +127,9 @@
     } else {
          out.println("An Error Occurred, check Your Inputs");
      }
+            } catch(Exception e) {
+            out.println(e.getMessage());
+         }
 }%>
 </body>
 </html>

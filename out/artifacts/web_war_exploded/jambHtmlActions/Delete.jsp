@@ -15,7 +15,22 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <title>Delete</title>
 </head>
-<body><%
+<body>
+<ul class="nav nav-pills nav-justified" style="position: fixed">
+    <li class="nav-item" style = "color: Green;">
+        <a class="nav-link " href="../Home.jsp">Home</a>
+    </li>
+    <li class="nav-item" style = "color: Green">
+        JAMBAPP
+    </li>
+    <li class="nav-item">
+        <a class="nav-link " href="listAllCandidate.jsp">View All candidate</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Logout</a>
+    </li>
+</ul>
+<%
     if (request.getMethod().equalsIgnoreCase("GET")) {
         String regNo = request.getParameter("regNo");
         try {

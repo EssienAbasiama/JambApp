@@ -20,7 +20,20 @@
     <title>GetAspirantBySchoolName</title>
 </head>
 <body>
-<p>Get Aspirants By Registration Number</p>
+<div style="padding: 3px">
+    <ul class="nav nav-pills nav-justified " style="position: fixed">
+        <li class="nav-item" style = "color: White">
+            <strong>JAMBAPP</strong>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn- btn-success" href="listAllCandidate.jsp" style = "color: White">View All candidate</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true" style = "color: White">Logout</a>
+        </li>
+    </ul>
+</div>
+<h1>Get Aspirants By Registration Number</h1>
 <form action="" method="post">
     <label for="school">Find By School Name</label>
     <input type="text" id="school" name="school">

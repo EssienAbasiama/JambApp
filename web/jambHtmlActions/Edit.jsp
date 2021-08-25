@@ -21,6 +21,19 @@
     <title>Update Student</title>
 </head>
 <body>
+<div style="padding:2%">
+    <ul class="nav nav-pills nav-justified btn-success">
+        <li class="nav-item" style = "color: Green;">
+            <a class="nav-link"style = "color: white" href="../Home.jsp"><strong>JAMBAPP</strong></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="listAllCandidate.jsp" style = "color: white">View All candidate</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true" style = "color: white">Logout</a>
+        </li>
+    </ul>
+</div>
 <%
     if (request.getMethod().equalsIgnoreCase("GET")) {
         AspirantModel repo = null;
@@ -33,68 +46,75 @@
         }
         assert repo != null;
     %>
+<div class ="register-class"style="margin: 3% 28%;border: 5px solid white;padding:2%; border-radius: 10% ">
             <form method = "post">
-                <div class = form-group>
-                    <label for="Regno">Registration Number</label>
-                    <input type="text" id="Regno" name="Regno" value="<%=repo.getRegistrationNumber()%>" readonly>
+                <div style="display: flex">
+                    <div class = form-group>
+                        <label for="Regno" style="display: block;color: white">Registration Number</label>
+                        <input type="text" id="Regno" name="Regno" value="<%=repo.getRegistrationNumber()%>" readonly>
+                    </div>
+                    <div class = form-group>
+                        <label for="firstName" style="display: block;color: white">FirstName</label>
+                        <input type="text" id="firstName" name="firstName" value="<%=repo.getFirstName()%>">
+                    </div>
+                    <div class = form-group>
+                        <label for="lastName" style="display: block;color: white">lastName</label>
+                        <input type="text" id="lastName" name="lastName" value="<%=repo.getLastName()%>">
+                    </div>
                 </div>
-                <div class = form-group>
-                    <label for="firstName">FirstName</label>
-                    <input type="text" id="firstName" name="firstName" value="<%=repo.getFirstName()%>">
-                </div>
-                <div class = form-group>
-                    <label for="lastName">lastName</label>
-                    <input type="text" id="lastName" name="lastName" value="<%=repo.getLastName()%>">
-                </div>
-                <div class = "form-group">
-                    <label for="middleName">Middle Name</label>
-                    <input type="text" id="middleName" name="middleName" value="<%=repo.getMiddleName()%>">
-                </div>
-                <div class = "form-group">
-                    <label for="dateOfBirth">DateOfBirth</label>
-                    <input type="Date" id="dateOfBirth" name="dateOfBirth" value="<%=repo.getDateOfBirth()%>">
-                </div>
+                <div style="display: flex">
+                    <div class = "form-group">
+                        <label for="middleName" style="display: block;color: white">Middle Name</label>
+                        <input type="text" id="middleName" name="middleName" value="<%=repo.getMiddleName()%>">
+                    </div>
+                    <div class = "form-group">
+                        <label for="dateOfBirth" style="display: block;color: white">DateOfBirth</label>
+                        <input type="Date" id="dateOfBirth" name="dateOfBirth" value="<%=repo.getDateOfBirth()%>">
+                    </div>
 
-                <div class = "form-group">
-                    <label for="address">Address</label>
-                    <input type="text" id="address" name="address" value="<%=repo.getAddress()%>">
+                    <div class = "form-group">
+                        <label for="address" style="display: block;color: white">Address</label>
+                        <input type="text" id="address" name="address" value="<%=repo.getAddress()%>">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" value="<%=repo.getEmail()%>">
-                </div>
-                <div class="form-group">
-                    <label for="nIN">NIN</label>
-                    <input type="text" id="nIN" name="nIN" value="<%=repo.getNin()%>">
-                </div>
+                <div style="display: flex">
+                    <div class="form-group">
+                        <label for="email" style="display: block;color: white">Email</label>
+                        <input type="email" id="email" name="email" value="<%=repo.getEmail()%>">
+                    </div>
+                    <div class="form-group">
+                        <label for="nIN" style="display: block;color: white">NIN</label>
+                        <input type="text" id="nIN" name="nIN" value="<%=repo.getNin()%>">
+                    </div>
 
-                <div class="form-group">
-                    <label for="gender">Gender</label>
-                    <input type="text" id="gender" name="gender" value="<%=repo.getGender()%>">
+                    <div class="form-group">
+                        <label for="gender" style="display: block;color: white">Gender</label>
+                        <input type="text" id="gender" name="gender" value="<%=repo.getGender()%>">
+                    </div>
                 </div>
+                <div style="display: flex">
+                    <div class="form-group">
+                        <label for="state" style="display: block;color: white">State</label>
+                        <input type="text" id="state" name="state" value="<%=repo.getStateOfOrigin()%>">
+                    </div>
 
-                <div class="form-group">
-                    <label for="state">State</label>
-                    <input type="text" id="state" name="state" value="<%=repo.getStateOfOrigin()%>">
-                </div>
+                    <div class = "form-group">
+                        <label for="institution" style="display: block;color: white">Institution</label>
+                        <input type="text" id="institution" name="institution" value="<%=repo.getInstitution()%>">
+                    </div>
 
-                <div class = "form-group">
-                    <label for="institution">Institution</label>
-                    <input type="text" id="institution" name="institution" value="<%=repo.getInstitution()%>">
-                </div>
-
-                <div class="form-group">
-                    <label for="course">Course</label>
-                    <input type="text" id="course" name="course" value ="<%=repo.getCourse()%>">
+                    <div class="form-group">
+                        <label for="course" style="display: block;color: white">Course</label>
+                        <input type="text" id="course" name="course" value ="<%=repo.getCourse()%>">
+                    </div>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Update</button>
                 </div>
             </form>
+</div>
     <%
-
         }
-
             if(request.getMethod().equalsIgnoreCase("POST")) {
                 String regno = request.getParameter("Regno");
                 String firstName = request.getParameter("firstName");

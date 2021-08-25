@@ -19,12 +19,26 @@
     <title>All Candidate</title>
 </head>
 <body style="color: #ffffff">
+<div style="padding: 3px; background: white">
+    <ul class="nav nav-pills nav-justified btn-success" style="font-size: 2vh">
+        <li class="nav-item">
+            <a class="nav-link" style = "color: white" href="../Home.jsp"><strong>JAMBAPP</strong></a>
+        </li>
+        <li class="nav-item" style = "color: white">
+            <a class="nav-link" style = "color: white" href="listAllCandidate.jsp">View All candidate</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" style = "color: white" href="#" tabindex="-1" aria-disabled="true">Logout</a>
+        </li>
+    </ul>
+</div>
+
     <div class = " container form-group" style = "display:flex;justify-content: space-around">
         <div class = "form-group">
             <a href="findAspirantsByRegNo.jsp" class="btn btn-outline-success btn--animation" style = "color: white">Get Aspirants By Registration Number</a>
         </div>
         <div class ="form-group">
-            <a href="findAspirantsBySchoolName.jsp" class="btn btn--outline-success btn--animation" style = "color: white">Get Aspirants By School Name</a>
+            <a href="findAspirantsBySchoolName.jsp" class="btn btn-outline-success btn--animation" style = "color: white">Get Aspirants By School Name</a>
         </div>
     </div>
     <div>
